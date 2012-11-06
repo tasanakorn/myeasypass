@@ -1,7 +1,6 @@
 from MasterController import MasterController
 
 from model import user_prefs
-from Crypto.Cipher import ARC4
 
 
 class SettingController(MasterController):

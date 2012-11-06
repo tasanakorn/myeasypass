@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+{% block body %}
+	<h1>Setting</h1>
+	<div class="setting-form">
+		<form method="post" action="{{action}}" id="formSetting">
+			<div class="topic">EasyPass</div>
+			<div class="group">			
+				<div><label>Username</label><input type="text" name="easypass_username" value="{{user_prefs.easypass_username}}"></div>
+				<div><label>Password</label><input type="password" name="easypass_password" value=""></div>
+			</div>
+			<input type="hidden" name="cmd" value="update">
+			<div><a href="#save" onclick="$('#formSetting').submit();return false;" class="button">Save</a>
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+application: myeasypass
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- deferred: on
+
+handlers:
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+
+- url: /images
+  static_dir: static/images
+  
+- url: .*
+  script: main.py
+  login: required
